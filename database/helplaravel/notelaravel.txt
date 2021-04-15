@@ -1,0 +1,66 @@
+How to create a projet laravel
+*******************************
+composer create-project laravel/laravel crud-laravel
+composer create-project laravel/laravel crud --prefer-dist
+composer create-project laravel/laravel memoire --prefer-dist
+
+local struger laravel
+
+composer create-project laravel/laravel crud --prefer-dist
+
+
+
+cd name-project
+php artisan serve
+
+créer un référentiel Git
+*************************
+laravel new name-project --git
+*******************************
+How to create the file migration
+php artisan make:migration create_students_table --create=students
+
+php artisan make:migration create_memoire_table --create=memoire
+
+******************************************************************
+pour créer un controller
+php artisan make:controller StudentController --resource--model=Student
+
+php artisan make:model Memoire -m && php artisan make:controller StudentController -r
+comment créer un controller
+php artisan make:controller AjaxCrudsController --resource
+***********************************************************************
+Route::resource('students','App\Http\Controllers\StudentController');
+***********************************************************************
+la commande qui permet de créer un model
+php artisan make:model AjaxCrud -m
+***********************************************************************
+
+
+
+$table->string('studname');
+$table->string('course);
+$table->string('fee');
+
+php artisan migrate
+
+
+
+
+
+
+php artisan migrate:fresh
+
+
+$table->bigIncrements('id');
+php artisan make: model Crud -m
+php artisan make: controller Crud --resource
+........................................................................
+ $data = Crud::latest()->paginate(5);
+        return view('index', compact('data'))
+                ->with('i', (request()->input('page', 1) - 1) * 5);
+
+.......................................................................
+@yield('main')
+
+

@@ -1,0 +1,10 @@
+php artisan make:model CategorieBoutique -m && php artisan make:controller CategorieBoutiqueController -r
+php artisan make:model CategorieProduit -m && php artisan make:controller CategorieProduitController -r
+php artisan make:model Boutique -m && php artisan make:controller BoutiqueController -r
+php artisan make:model Fournisseur -m && php artisan make:controller FournisseurController -r
+php artisan make:model Produit -m && php artisan make:controller ProduitController -r
+php artisan make:model Commande -m && php artisan make:controller CommandeController -r
+php artisan make:model Client -m && php artisan make:controller ClientController -r
+
+
+
